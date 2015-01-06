@@ -42,13 +42,18 @@
 </div>
 <script src="main.js"></script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-＜script type="text/x-mathjax-config"＞
-    MathJax.Hub.Config({
-        TeX: {equationNumbers: {
-            autoNumber: ["AMS"], useLabelIds: true}},
-            "HTML-CSS": {linebreaks: {automatic: true}},
-            SVG: {linebreaks: {automatic: true}}
-    });
+<script type="text/javascript" src="includes/wuyaaeditor/mathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+		<script type="text/javascript">
+		var QUEUE = MathJax.Hub.queue; 
+		var math = null, box = null;
+		MathJax.Hub.Config(
+			{showMathMenu: false,
+			showMathMenuMSIE: false,
+			imageFont: null,
+			tex2jax: { inlineMath: [["\\(", "\\)"]],displayMath: [["$$", "$$"],["\\[", "\\]"]], processEscapes: true },
+			TeX: { extensions: ["mhchem.js"]}
+			});
+	</script>
 ＜/script＞
 <script id="content" type="text/mustache">
     <h1>{{title}}</h1>
